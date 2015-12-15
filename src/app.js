@@ -1,12 +1,19 @@
 export class App {
+
   configureRouter(config, router) {
-    config.title = 'Aurelia';
+    config.title = 'Tricktails';
     config.map([
       { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
+      { route: 'about',         name: 'about',        moduleId: 'about',        nav: true, title: 'About' },
+      { route: 'dogs',        name: 'dogs',           moduleId: 'dogs',         nav: true, title: 'Dogs' }
     ]);
 
     this.router = router;
   }
+
+
+  toggleMenu() {    
+    $("#wrapper").toggleClass("toggled");
+  }
+
 }
